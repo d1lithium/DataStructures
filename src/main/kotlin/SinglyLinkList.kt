@@ -106,20 +106,6 @@ class SinglyLinkList {
 fun main(args: Array<String>) {
 
     val mySinglyLinkList = SinglyLinkList()
-    /*
-     val firstNode = mySinglyLinkedList.ListNode(10)
-     val secondNode = mySinglyLinkedList.ListNode(20)
-     val thirdNode = mySinglyLinkedList.ListNode(30)
-     val fourthNode = mySinglyLinkedList.ListNode(40)
-     val fifthNode = mySinglyLinkedList.ListNode(50)
-
-
-     mySinglyLinkedList.head = firstNode
-     firstNode.next = secondNode
-     secondNode.next = thirdNode
-     thirdNode.next = fourthNode
-     fourthNode.next = fifthNode
-      */
 
     mySinglyLinkList.insertAtTail(10)
     mySinglyLinkList.insertAtHead(20)
