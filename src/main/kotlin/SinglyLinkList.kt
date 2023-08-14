@@ -57,12 +57,12 @@ class SinglyLinkList {
         else if(idx >= length)
             print("Invalid index")
         else{
-            while (count+1 !== idx){
+            while (count+1 != idx){
                 current = current.next!!
                 count++
 
             }
-            var temp = current.next
+            val temp = current.next
             current.next = temp?.next
             length--
         }
@@ -70,8 +70,7 @@ class SinglyLinkList {
 
     fun deleteNodeOfValues(value: Any){
         var current = head
-        var count = 0;
-        var found: Boolean = false
+        var found = false
         if (head.getValue() == value){
             head = head.next!!
             current = head
@@ -81,12 +80,12 @@ class SinglyLinkList {
             if(current.next!!.getValue() == value){
                 found = true
                 if (current.next!!.getValue() == tail.getValue()){
-                    var temp = current.next
+                    val temp = current.next
                     current.next = temp!!.next
                     tail = current
                 }
                 else{
-                    var temp = current.next
+                    val temp = current.next
                     current.next = temp!!.next
                 }
                 length--
@@ -106,7 +105,7 @@ class SinglyLinkList {
 }
 fun main(args: Array<String>) {
 
-    var mySinglyLinkedList = SinglyLinkList()
+    val mySinglyLinkList = SinglyLinkList()
     /*
      val firstNode = mySinglyLinkedList.ListNode(10)
      val secondNode = mySinglyLinkedList.ListNode(20)
@@ -122,44 +121,44 @@ fun main(args: Array<String>) {
      fourthNode.next = fifthNode
       */
 
-    mySinglyLinkedList.insertAtTail(10)
-    mySinglyLinkedList.insertAtHead(20)
-    mySinglyLinkedList.insertAtTail(30)
-    mySinglyLinkedList.insertAtHead(40)
-    mySinglyLinkedList.insertAtTail(50)
+    mySinglyLinkList.insertAtTail(10)
+    mySinglyLinkList.insertAtHead(20)
+    mySinglyLinkList.insertAtTail(30)
+    mySinglyLinkList.insertAtHead(40)
+    mySinglyLinkList.insertAtTail(50)
 
-    mySinglyLinkedList.insertAtHead("Moin")
-    mySinglyLinkedList.insertAtHead("Raza")
-    mySinglyLinkedList.insertAtHead("Khan")
-    mySinglyLinkedList.insertAtHead("Pathan")
+    mySinglyLinkList.insertAtHead("Moin")
+    mySinglyLinkList.insertAtHead("Raza")
+    mySinglyLinkList.insertAtHead("Khan")
+    mySinglyLinkList.insertAtHead("Pathan")
 
-    mySinglyLinkedList.insertAtTail("Ameer")
-    mySinglyLinkedList.insertAtTail("Hamza")
-    mySinglyLinkedList.insertAtTail("Raza")
-    mySinglyLinkedList.insertAtTail("Khan")
-    mySinglyLinkedList.insertAtTail("Pathan")
+    mySinglyLinkList.insertAtTail("Ameer")
+    mySinglyLinkList.insertAtTail("Hamza")
+    mySinglyLinkList.insertAtTail("Raza")
+    mySinglyLinkList.insertAtTail("Khan")
+    mySinglyLinkList.insertAtTail("Pathan")
 
 
 
-    mySinglyLinkedList.display()
-    print("\nhead: ${mySinglyLinkedList.head.getValue()}")
-    print("\ntail: ${mySinglyLinkedList.tail.getValue()}")
-    print("\nlength: ${mySinglyLinkedList.length()}")
+    mySinglyLinkList.display()
+    print("\nhead: ${mySinglyLinkList.head.getValue()}")
+    print("\ntail: ${mySinglyLinkList.tail.getValue()}")
+    print("\nlength: ${mySinglyLinkList.length()}")
 
     print("\ndeleteNode at index 4:")
-    mySinglyLinkedList.deleteNodeAtIndex(4)
+    mySinglyLinkList.deleteNodeAtIndex(4)
     println()
-    mySinglyLinkedList.display()
-    print("\nlength: ${mySinglyLinkedList.length()}")
-    print("\nhead: ${mySinglyLinkedList.head.getValue()}")
-    print("\ntail: ${mySinglyLinkedList.tail.getValue()}")
+    mySinglyLinkList.display()
+    print("\nlength: ${mySinglyLinkList.length()}")
+    print("\nhead: ${mySinglyLinkList.head.getValue()}")
+    print("\ntail: ${mySinglyLinkList.tail.getValue()}")
 
-    mySinglyLinkedList.deleteNodeOfValues("Pathan")
+    mySinglyLinkList.deleteNodeOfValues("Pathan")
     println()
-    mySinglyLinkedList.display()
-    print("\nlength: ${mySinglyLinkedList.length()}")
-    print("\nhead: ${mySinglyLinkedList.head.getValue()}")
-    print("\ntail: ${mySinglyLinkedList.tail.getValue()}")
+    mySinglyLinkList.display()
+    print("\nlength: ${mySinglyLinkList.length()}")
+    print("\nhead: ${mySinglyLinkList.head.getValue()}")
+    print("\ntail: ${mySinglyLinkList.tail.getValue()}")
 
 
 
